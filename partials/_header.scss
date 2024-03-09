@@ -1,0 +1,128 @@
+header {
+    width: 100%;
+
+}
+.header-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+i{
+    color: $white-normal;
+
+}
+
+.header-icons {
+    display: flex;;
+    gap: 14px;
+}
+
+.header-icons a:hover{
+    i{
+        animation: translateY 0.3s infinite alternate;
+        color: $purple-light;
+    }
+}
+
+@keyframes translateY {
+    from{
+        transform: translateY(0) scale(1);
+    }
+    to {
+        transform: translateY(-8px) scale(1);
+    }
+}
+
+.header-button {
+    font-size: 26px;
+    border: 0px solid $primary-normal;
+    border-radius: 10px;
+    padding: 10px 12px;
+    color: $primary-normal;
+    background-color: transparent;
+    transition: background-color 1s;
+}
+
+.header-button:hover {
+    border: 1px solid $purple-light;
+    background-color: $purple-light;
+}
+
+a {
+    text-decoration: none;
+}
+
+.nav {
+    max-width: 1280px;
+    height: 70px;
+    margin-inline: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}   
+
+.nav-list{
+    display: flex;
+    gap: 32px;
+    list-style: none;
+}
+
+.nav-list a {
+    font-size: 18px;
+    font-weight: 700;
+    color: $white-normal;
+    padding-block: 16px;
+}
+.hamburguer {
+    border: none;
+    background: none;
+    border-top: 3px solid $white-normal;
+    cursor: pointer;
+}
+
+.hamburguer::before,
+.hamburguer::after{
+    content: "";
+    display: block;
+    width: 30px;
+    height: 3px;
+    background: $white-normal;
+    margin-top: 5px;
+}
+
+
+
+
+//.header-logo{
+    //display: flex;
+    //align-items: center;
+    //justify-content: center;
+    //margin-top: 14px;                            
+//}
+// Aqui são as especificações para o logo, na forma de site visto em Computador, imagem grande. Por enquanto estou retirando para valorizar a face da Lili
+
+@media screen and (max-width: 768px){
+    .header-content{
+        width: 100%;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+
+        i{
+            margin-top: 16px;
+            font-size: 34px;
+        }
+    }
+
+    .header-logo img {
+        display: none;
+        //width: 160px;
+        //margin-top: 46px;  Esses dois, servem para quando o logo ficar pronto .
+    }
+
+    .header-button{
+        display: none;
+    }
+}
+
